@@ -1,9 +1,11 @@
-const withPWA = require('next-pwa')({
+import withPWA from 'next-pwa';
+
+const config = {
+  reactStrictMode: true,
+};
+
+export default withPWA({
   dest: 'public',
   register: true,
   skipWaiting: true,
-});
-
-module.exports = withPWA({
-  reactStrictMode: true,
-});
+})(config);
